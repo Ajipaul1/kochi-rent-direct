@@ -1,6 +1,6 @@
 // Kochi Rent Direct - Vanilla JS for Jamstack
 
-import { client } from './appwrite.js';
+import { client, databases, ID } from './appwrite.js';
 
 // Ping Appwrite backend to verify setup
 client.ping().then(() => {
@@ -82,6 +82,18 @@ function contactOwner(encodedPhone) {
 // Report broker
 function reportBroker(propertyId) {
     alert(`Thank you for reporting. We will investigate property ID: ${propertyId}`);
+}
+
+// Add a new property to Appwrite database
+async function addProperty(property) {
+    try {
+        const response = await databases.createDocument('698b17110024baf623be', 'properties', ID.unique(), property);
+        console.log('Property added:', response);
+        // Reload properties after adding
+        loadProperties();
+    } catch (error) {
+        console.error('Error adding property:', error);
+    }
 }
 
 // Event listeners
