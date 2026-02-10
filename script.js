@@ -32,6 +32,7 @@ function displayProperties(properties) {
         const verifiedBadge = property.verified ? '<span class="verified">Verified</span>' : '';
 
         card.innerHTML = `
+            <img src="${property.image}" alt="${property.title}">
             <h3>${property.title}</h3>
             <p><strong>Rent:</strong> ₹${property.rent}/month</p>
             <p><strong>Deposit:</strong> ₹${property.deposit}</p>

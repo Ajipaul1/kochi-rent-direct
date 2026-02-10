@@ -8,7 +8,8 @@
     "size": "1000 sq ft",
     "description": "Spacious 2BHK apartment near Infopark, direct owner, no brokerage.",
     "phone": "9876543210",
-    "verified": true
+    "verified": true,
+    "image": "https://picsum.photos/400/300?random=1"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "size": "800 sq ft",
     "description": "Cozy 1BHK flat, close to metro station, owner listing.",
     "phone": "9123456789",
-    "verified": true
+    "verified": true,
+    "image": "https://picsum.photos/400/300?random=2"
   },
   {
     "id": 3,
@@ -30,6 +32,67 @@
     "size": "1500 sq ft",
     "description": "Beautiful 3BHK house with garden, direct from owner.",
     "phone": "9988776655",
-    "verified": false
+    "verified": false,
+    "image": "https://picsum.photos/400/300?random=3"
+  },
+  {
+    "id": 4,
+    "title": "Studio Apartment in Vyttila",
+    "rent": 10000,
+    "deposit": 20000,
+    "area": "Vyttila",
+    "size": "600 sq ft",
+    "description": "Modern studio near Vyttila Mobility Hub, perfect for singles.",
+    "phone": "8765432109",
+    "verified": true,
+    "image": "https://picsum.photos/400/300?random=4"
+  },
+  {
+    "id": 5,
+    "title": "2BHK Villa in Fort Kochi",
+    "rent": 25000,
+    "deposit": 50000,
+    "area": "Fort Kochi",
+    "size": "1200 sq ft",
+    "description": "Historic villa with sea views, direct owner, no brokerage.",
+    "phone": "7654321098",
+    "verified": true,
+    "image": "https://picsum.photos/400/300?random=5"
+  },
+  {
+    "id": 6,
+    "title": "1BHK Flat in Kalamassery",
+    "rent": 11000,
+    "deposit": 22000,
+    "area": "Kalamassery",
+    "size": "750 sq ft",
+    "description": "Affordable 1BHK near industrial area, owner direct.",
+    "phone": "6543210987",
+    "verified": false,
+    "image": "https://picsum.photos/400/300?random=6"
+  },
+  {
+    "id": 7,
+    "title": "3BHK Apartment in MG Road",
+    "rent": 22000,
+    "deposit": 44000,
+    "area": "MG Road",
+    "size": "1300 sq ft",
+    "description": "Luxury apartment in city center, verified owner.",
+    "phone": "5432109876",
+    "verified": true,
+    "image": "https://picsum.photos/400/300?random=7"
+  },
+  {
+    "id": 8,
+    "title": "2BHK House in Palarivattom",
+    "rent": 18000,
+    "deposit": 36000,
+    "area": "Palarivattom",
+    "size": "1100 sq ft",
+    "description": "Spacious house near Lulu Mall, direct from owner.",
+    "phone": "4321098765",
+    "verified": true,
+    "image": "https://picsum.photos/400/300?random=8"
   }
 ]
