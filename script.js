@@ -1,5 +1,14 @@
 // Kochi Rent Direct - Vanilla JS for Jamstack
 
+import { client } from './appwrite.js';
+
+// Ping Appwrite backend to verify setup
+client.ping().then(() => {
+    console.log('Appwrite setup verified: Ping successful');
+}).catch(error => {
+    console.error('Appwrite setup error:', error);
+});
+
 // Obfuscate phone numbers (simple base64 encode/decode for demo)
 function encodePhone(phone) {
     return btoa(phone);
