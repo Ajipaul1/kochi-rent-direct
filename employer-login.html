@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Login - Kochi Rent Direct</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "appwrite": "https://cdn.jsdelivr.net/npm/appwrite@14.0.0/+esm"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Employer Login</h1>
+        <a href="index.html">Back to Home</a>
+    </header>
+
+    <section id="auth">
+        <h2>Register</h2>
+        <form id="register-form">
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="upload" style="display: none;">
+        <h2>Upload Photo</h2>
+        <input type="file" id="photo-input" accept="image/*">
+        <button id="upload-btn">Upload</button>
+        <div id="upload-status"></div>
+    </section>
+
+    <script type="module" src="employer-login.js"></script>
+</body>
+</html>
