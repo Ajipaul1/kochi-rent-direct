@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kochi Rent Direct - Zero Brokerage Rentals</title>
-    <meta name="description" content="Find direct owner flats and houses for rent in Kochi without brokerage. Search in Kakkanad, Edappally, Aluva and more.">
-    <meta name="keywords" content="rent Kochi, direct owner flats Kakkanad, no brokerage rent Kochi, flats for rent Edappally, houses Aluva">
+    <title>Direct Rent India - Zero Brokerage Rentals</title>
+    <meta name="description" content="Find direct owner flats and houses for rent in India without brokerage. Search in major cities like Kochi, Mumbai, Delhi and more.">
+    <meta name="keywords" content="rent India, direct owner flats, no brokerage rent, flats for rent, houses for rent">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <script type="importmap">
@@ -23,20 +23,39 @@
     </header>
 
     <section id="hero">
+        <h2>Welcome to Direct Rent India</h2>
+        <p>Zero Brokerage Rentals from Owners</p>
+        <div class="user-type">
+            <button id="renter-btn" class="btn active">I'm Looking for a Property</button>
+            <button id="owner-btn" class="btn">I'm a Property Owner</button>
+        </div>
+    </section>
+
+    <section id="renter-section">
         <h2>Find Your Perfect Home</h2>
         <input type="text" id="search" placeholder="Search by area (e.g., Kakkanad, Edappally)">
         <button id="search-btn">Search</button>
-        <button id="add-property-btn">Add Sample Property</button>
-        <a href="employer-login.html" class="btn">Employer Login</a>
-    </section>
-
-    <section id="properties">
-        <h2>Available Properties</h2>
         <div id="property-list"></div>
     </section>
 
+    <section id="owner-section" style="display: none;">
+        <h2>List Your Property</h2>
+        <form id="add-property-form">
+            <input type="text" id="title" placeholder="Property Title" required>
+            <input type="number" id="rent" placeholder="Rent per month" required>
+            <input type="number" id="deposit" placeholder="Deposit" required>
+            <input type="text" id="area" placeholder="Area" required>
+            <input type="text" id="size" placeholder="Size" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <input type="url" id="image" placeholder="Image URL" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <button type="submit">Add Property</button>
+        </form>
+        <p>Already listed? <a href="owner-login.html">Login to manage your properties</a></p>
+    </section>
+
     <footer>
-        <p>&copy; 2023 Kochi Rent Direct. All rights reserved.</p>
+        <p>&copy; 2023 Direct Rent India. All rights reserved.</p>
     </footer>
 
     <script type="module" src="script.js"></script>

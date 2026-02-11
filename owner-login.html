@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Owner Login - Kochi Rent Direct</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "appwrite": "https://cdn.jsdelivr.net/npm/appwrite@14.0.0/+esm"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Direct Rent India - Owner Login</h1>
+        <a href="index.html">Back to Home</a>
+    </header>
+
+    <section id="auth">
+        <h2>Register</h2>
+        <form id="register-form">
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="dashboard" style="display: none;">
+        <h2>Property Owner Dashboard</h2>
+        <button id="logout-btn">Logout</button>
+
+        <h3>Add New Property</h3>
+        <form id="add-property-form">
+            <input type="text" id="prop-title" placeholder="Property Title" required>
+            <select id="prop-type" required>
+                <option value="">Select Type</option>
+                <option value="Apartment">Apartment</option>
+                <option value="House">House</option>
+                <option value="Villa">Villa</option>
+            </select>
+            <input type="text" id="prop-city" placeholder="City" required>
+            <input type="text" id="prop-area" placeholder="Area" required>
+            <input type="text" id="prop-size" placeholder="Size (e.g., 2BHK)" required>
+            <input type="number" id="prop-bedrooms" placeholder="Bedrooms" required>
+            <input type="number" id="prop-bathrooms" placeholder="Bathrooms" required>
+            <select id="prop-furnished">
+                <option value="No">Not Furnished</option>
+                <option value="Semi">Semi Furnished</option>
+                <option value="Fully">Fully Furnished</option>
+            </select>
+            <select id="prop-parking">
+                <option value="No">No Parking</option>
+                <option value="Yes">Parking Available</option>
+            </select>
+            <input type="number" id="prop-rent" placeholder="Rent per month (₹)" required>
+            <input type="number" id="prop-deposit" placeholder="Deposit (₹)" required>
+            <textarea id="prop-description" placeholder="Description" required></textarea>
+            <input type="tel" id="prop-phone" placeholder="Phone Number" required>
+            <input type="file" id="prop-photo" accept="image/*" required>
+            <input type="hidden" id="edit-id">
+            <button type="submit">Add Property</button>
+        </form>
+
+        <h3>Your Properties</h3>
+        <div id="properties-list"></div>
+    </section>
+
+    <script type="module" src="owner-login.js"></script>
+</body>
+</html>

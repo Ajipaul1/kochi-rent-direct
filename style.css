@@ -1,4 +1,4 @@
-/* Mobile-first CSS for Kochi Rent Direct */
+/* Mobile-first CSS for Direct Rent India */
 
 * {
     margin: 0;
@@ -177,5 +177,9 @@ footer {
 @media (min-width: 1024px) {
     #property-list {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    #properties-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
