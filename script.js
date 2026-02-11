@@ -1,6 +1,11 @@
 // Kochi Rent Direct - Vanilla JS for Jamstack
 
-import { client, databases, ID } from './appwrite.js';
+// No imports needed! The script tag in HTML already loaded "Appwrite"
+const client = new Appwrite.Client()
+    .setEndpoint('https://sgp.cloud.appwrite.io/v1')
+    .setProject('698b11d3000bb9f04eff');
+
+const databases = new Appwrite.Databases(client);
 
 // Ping Appwrite backend to verify setup
 client.ping().then(() => {
@@ -87,7 +92,7 @@ function reportBroker(propertyId) {
 // Add a new property to Appwrite database
 async function addProperty(property) {
     try {
-        const response = await databases.createDocument('698b17110024baf623be', 'properties', ID.unique(), property);
+        const response = await databases.createDocument('698b17110024baf623be', 'properties', Appwrite.ID.unique(), property);
         console.log('Property added:', response);
         // Reload properties after adding
         loadProperties();
