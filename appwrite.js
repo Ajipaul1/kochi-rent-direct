@@ -1,4 +1,4 @@
-import { Client, Account, Databases, ID } from "appwrite";
+import { Client, Account, Databases, ID } from "https://cdn.jsdelivr.net/npm/appwrite@14.0.0/+esm";
 
 const client = new Client()
     .setEndpoint("https://sgp.cloud.appwrite.io/v1")
@@ -7,4 +7,4 @@ const client = new Client()
 const account = new Account(client);
 const databases = new Databases(client);
 
-export { client, account, databases };
+export { client, account, databases, ID };

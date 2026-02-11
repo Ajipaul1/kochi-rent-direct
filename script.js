@@ -92,7 +92,7 @@ function reportBroker(propertyId) {
 // Add a new property to Appwrite database
 async function addProperty(property) {
     try {
-        const response = await databases.createDocument('698b17110024baf623be', 'properties', Appwrite.ID.unique(), property);
+        const response = await databases.createDocument('698b17110024baf623be', 'properties', ID.unique(), property);
         console.log('Property added:', response);
         // Reload properties after adding
         loadProperties();
