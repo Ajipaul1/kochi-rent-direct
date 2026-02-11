@@ -1,4 +1,4 @@
-import { Client, Account, Storage, Databases, ID } from "appwrite";
+import { Client, Account, Storage, Databases, ID, Query } from "https://cdn.jsdelivr.net/npm/appwrite@14.0.0/+esm";
 
 const client = new Client()
     .setEndpoint('https://sgp.cloud.appwrite.io/v1')
@@ -7,6 +7,7 @@ const client = new Client()
 const account = new Account(client);
 const storage = new Storage(client);
 const databases = new Databases(client);
+const databaseId = 'default';
 
 // Register
 document.getElementById('register-form').addEventListener('submit', async (e) => {
@@ -62,7 +63,7 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
 async function loadProperties() {
     try {
         const user = await account.get();
-        const response = await databases.listDocuments('properties', [], { filter: `ownerId=${user.$id}` });
+        const response = await databases.listDocuments(databaseId, 'properties', [Query.equal("ownerId", user.$id)]);
         const listDiv = document.getElementById('properties-list');
         listDiv.innerHTML = '';
         response.documents.forEach(doc => {
@@ -91,10 +92,16 @@ async function loadProperties() {
 document.getElementById('add-property-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     const title = document.getElementById('prop-title').value;
-    const rent = parseInt(document.getElementById('prop-rent').value);
-    const deposit = parseInt(document.getElementById('prop-deposit').value);
+    const type = document.getElementById('prop-type').value;
+    const city = document.getElementById('prop-city').value;
     const area = document.getElementById('prop-area').value;
     const size = document.getElementById('prop-size').value;
+    const bedrooms = parseInt(document.getElementById('prop-bedrooms').value);
+    const bathrooms = parseInt(document.getElementById('prop-bathrooms').value);
+    const furnished = document.getElementById('prop-furnished').value;
+    const parking = document.getElementById('prop-parking').value;
+    const rent = parseInt(document.getElementById('prop-rent').value);
+    const deposit = parseInt(document.getElementById('prop-deposit').value);
     const description = document.getElementById('prop-description').value;
     const phone = document.getElementById('prop-phone').value;
     const file = document.getElementById('prop-photo').files[0];
@@ -109,7 +116,7 @@ document.getElementById('add-property-form').addEventListener('submit', async (e
             imageUrl = `https://sgp.cloud.appwrite.io/v1/storage/buckets/photos/files/${fileId}/view?project=698b11d3000bb9f04eff`;
         }
 
-        let data = { title, rent, deposit, area, size, description, phone, image: imageUrl, ownerId: user.$id };
+        let data = { title, type, city, area, size, bedrooms, bathrooms, furnished, parking, rent, deposit, description, phone, image: imageUrl, ownerId: user.$id };
 
         if (editId) {
             if (!file) {

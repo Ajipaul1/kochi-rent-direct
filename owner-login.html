@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Owner Login - Kochi Rent Direct</title>
     <link rel="stylesheet" href="style.css">
-    <script type="importmap">
-    {
-      "imports": {
-        "appwrite": "https://cdn.jsdelivr.net/npm/appwrite@14.0.0/+esm"
-      }
-    }
-    </script>
 </head>
 <body>
     <header>
@@ -66,7 +59,7 @@
             <input type="number" id="prop-deposit" placeholder="Deposit (₹)" required>
             <textarea id="prop-description" placeholder="Description" required></textarea>
             <input type="tel" id="prop-phone" placeholder="Phone Number" required>
-            <input type="file" id="prop-photo" accept="image/*" required>
+            <input type="file" id="prop-photo" accept="image/*">
             <input type="hidden" id="edit-id">
             <button type="submit">Add Property</button>
         </form>
